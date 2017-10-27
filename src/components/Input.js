@@ -3,10 +3,11 @@ import { TextInput, View } from 'react-native';
 
 const Input = (props) => {
    const { containerStyle, inputStyle } = styles;
-   const { autoCapitalize, placeholder, onChangeText } = props;
+   const { placeholder, onChangeText } = props;
    return (
       <View style={containerStyle}>
-         <TextInput style={inputStyle}
+         <TextInput
+         style={inputStyle}
          placeholder={placeholder}
          onChangeText={onChangeText}
          />

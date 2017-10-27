@@ -2,10 +2,10 @@ import React from 'react';
 import { Text, View } from 'react-native';
 
 const Header = (props) => {
-   const { textStyle, viewStyle } = styles;
+   const { textStyle, headerStyle } = styles;
    
    return (
-      <View style={viewStyle}>
+      <View style={headerStyle}>
          <Text style={textStyle}>{props.title}</Text>
       </View>
    );
@@ -18,7 +18,7 @@ const styles = {
       padding: 10
    },
 
-   viewStyle: {
+   headerStyle: {
       backgroundColor: '#444444',
       alignItems: 'center',
       shadowColor: '#083861',

@@ -15,7 +15,7 @@ const styles = {
    cardStyle: {
       borderWidth: 1,
       borderRadius: 1,
-      borderColor: '#C6C6C6',
+      borderColor: '#ECECEC',
       borderBottomWidth: 0.1,
       marginLeft: 5,
       marginRight: 5,

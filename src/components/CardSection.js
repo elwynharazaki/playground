@@ -9,15 +9,15 @@ const CardSection = (props) => {
          {props.children}
       </View>
    );
-}
+};
 
 const styles = {
    cardSectionStyle: {
-      borderBottomWidth: 1,
-      padding: 5,
       backgroundColor: '#F9F9F9',
+      borderBottomWidth: 1,
+      borderColor: '#ECECEC',
       flexDirection: 'row',
-      borderColor: '#C6C6C6',
+      padding: 5,
       position: 'relative'
    }
 };

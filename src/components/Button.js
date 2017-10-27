@@ -13,8 +13,8 @@ const Button = (props) => {
 };
 
 const styles = {
-   textStyle: {
-      alignSelf: 'center',
+	textStyle: {
+		alignSelf: 'center',
       color: '#F9F9F9',
       fontSize: 16,
       fontWeight: '600',
@@ -22,13 +22,13 @@ const styles = {
       paddingBottom: 10
    },
 
-  buttonStyle: {
-    alignSelf: 'stretch',
-    alignItems: 'center',
-    borderRadius: 4,
-    flex: 1,
-    backgroundColor: '#F4F4F4',
-    padding: 2
+	buttonStyle: {
+		alignItems: 'center',
+		alignSelf: 'stretch',
+		borderRadius: 4,
+		flex: 1,
+		backgroundColor: '#F4F4F4',
+		padding: 2
    }
 };
 
