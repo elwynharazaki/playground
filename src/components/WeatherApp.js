@@ -5,34 +5,33 @@ import axios from 'axios';
 import Button from './Button';
 import Card from './Card';
 import CardSection from './CardSection';
-import Header from './Header';
 import Input from './Input';
 
 class WeatherApp extends Component {
    state = {
-      cityInput: '',
-      data: '',
       city: '',
+      cityInput: '',
+      country: '',
+      data: '',
       desc: '',
-      temp: '',
-      country: ''
+      temp: ''
    }
 
    onButtonPress() {
-      const url = `https://api.openweathermap.org/data/2.5/weather?q=${this.state.cityInput}&appid=4f3cdc2cde3ffd674711f5533acae677&units=metric`
+      const url = `https://api.openweathermap.org/data/2.5/weather?q=${this.state.cityInput}&appid=4f3cdc2cde3ffd674711f5533acae677&units=metric`;
       
       axios.get(url)
-      .then((result) => {
-         this.setState({
-            data: result.data,
-            icon: result.data.weather[0].icon,
-            city: result.data.name,
-            main: result.data.weather[0].main,
-            desc: result.data.weather[0].description,
-            temp: Math.round(result.data.main.temp),
-            country: result.data.sys.country
-         });
-      })
+         .then((result) => {
+            this.setState({
+               city: result.data.name,
+               country: result.data.sys.country,
+               data: result.data,
+               desc: result.data.weather[0].description,
+               icon: result.data.weather[0].icon,
+               main: result.data.weather[0].main,
+               temp: Math.round(result.data.main.temp)
+            });
+         })
 
       .catch((error) => {
          alert(error);
@@ -48,7 +47,7 @@ class WeatherApp extends Component {
 					<CardSection>
 						<View>
                      <Text style={styles.cityCountryStyle}>
-                     {this.state.city}, {this.state.country}
+                        {this.state.city}, {this.state.country}
                      </Text>
                   </View>
 					</CardSection>
@@ -56,8 +55,8 @@ class WeatherApp extends Component {
 					<CardSection>
 						<View style={styles.tempIconStyle}>
 							<Image
-                     style={styles.tempIconStyle}
-                     source={{ uri: `https://openweathermap.org/img/w/${this.state.icon}.png` }}
+                        style={styles.tempIconStyle}
+                        source={{ uri: `https://openweathermap.org/img/w/${this.state.icon}.png` }}
                      />
 						</View>
 
@@ -79,18 +78,18 @@ class WeatherApp extends Component {
             <Card>
                <CardSection>
                   <Input
-                  placeholder='ENTER YOUR CITY'
-                  onChangeText={text => this.setState({ cityInput: text })}
+                     placeholder='ENTER YOUR CITY'
+                     onChangeText={text => this.setState({ cityInput: text })}
                   /> 
                </CardSection>
 
                <CardSection>
                   <Button onPress={() => this.onButtonPress()}>
-                  GET WEATHER
+                     GET WEATHER
                   </Button>
                </CardSection>
-				</Card>
-				{this.renderWeather()}
+            </Card>
+               {this.renderWeather()}
          </View>
       );
    }

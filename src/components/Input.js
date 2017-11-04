@@ -4,12 +4,13 @@ import { TextInput, View } from 'react-native';
 const Input = (props) => {
    const { containerStyle, inputStyle } = styles;
    const { placeholder, onChangeText } = props;
+   
    return (
       <View style={containerStyle}>
          <TextInput
-         style={inputStyle}
-         placeholder={placeholder}
-         onChangeText={onChangeText}
+            style={inputStyle}
+            placeholder={placeholder}
+            onChangeText={onChangeText}
          />
       </View>
    );
@@ -24,8 +25,8 @@ const styles = {
    },
 
    inputStyle: {
-      alignSelf: 'stretch',
       alignItems: 'center',
+      alignSelf: 'stretch',
       color: '#444444',
       flex: 2,
       fontSize: 18,

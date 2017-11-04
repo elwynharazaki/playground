@@ -2,12 +2,12 @@ import React from 'react';
 import { Text, TouchableOpacity } from 'react-native';
 
 const Button = (props) => {
-  const { buttonStyle, textStyle } = styles;
+	const { buttonStyle, textStyle } = styles;
 
-   return (
-      <TouchableOpacity style={{ ...buttonStyle, backgroundColor: props.color || '#444444' }}
-         onPress={props.onPress}>
-         <Text style={textStyle}>{props.children}</Text>
+	return (
+		<TouchableOpacity style={{ ...buttonStyle, backgroundColor: props.color || '#444444' }}
+			onPress={props.onPress}>
+				<Text style={textStyle}>{props.children}</Text>
       </TouchableOpacity>
    );
 };
@@ -18,16 +18,16 @@ const styles = {
       color: '#F9F9F9',
       fontSize: 16,
       fontWeight: '600',
-      paddingTop: 10,
-      paddingBottom: 10
+      paddingBottom: 10,
+		paddingTop: 10
    },
 
 	buttonStyle: {
 		alignItems: 'center',
 		alignSelf: 'stretch',
+		backgroundColor: '#F4F4F4',
 		borderRadius: 4,
 		flex: 1,
-		backgroundColor: '#F4F4F4',
 		padding: 2
    }
 };
