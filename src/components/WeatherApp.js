@@ -79,6 +79,7 @@ class WeatherApp extends Component {
                <CardSection>
                   <Input
                      placeholder='ENTER YOUR CITY'
+                     underlineColorAndroid='transparent'
                      onChangeText={text => this.setState({ cityInput: text })}
                   /> 
                </CardSection>

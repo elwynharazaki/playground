@@ -7,7 +7,7 @@ import WeatherApp from './src/components/WeatherApp';
 const App = () => {
 	return (
 		<View style={{ flex: 1, backgroundColor: '#F2F2F2' }}>
-			<Header title={'OPENWEATHER'} />
+			<Header />
 				<ScrollView>
 					<WeatherApp />
 				</ScrollView>
