@@ -54,7 +54,7 @@ class WeatherApp extends Component {
 
 					<CardSection>
 						<View style={styles.tempIconStyle}>
-							<Image
+                     <Image
                         style={styles.tempIconStyle}
                         source={{ uri: `https://openweathermap.org/img/w/${this.state.icon}.png` }}
                      />

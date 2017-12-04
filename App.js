@@ -1,5 +1,5 @@
 import React from 'react';
-import { ScrollView, View } from 'react-native';
+import { StatusBar, View } from 'react-native';
 
 import Header from './src/components/Header';
 import WeatherApp from './src/components/WeatherApp';
@@ -7,11 +7,14 @@ import WeatherApp from './src/components/WeatherApp';
 const App = () => {
 	return (
 		<View style={{ flex: 1, backgroundColor: '#F2F2F2' }}>
-			<Header />
-				<ScrollView>
-					<WeatherApp />
-				</ScrollView>
-			</View>
+         <StatusBar
+            barStyle='default'
+            backgroundColor='transparent'
+            translucent
+         />
+         <Header />
+			<WeatherApp />
+      </View>
 	);
 };
 
